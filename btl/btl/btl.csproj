@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71D61511-DD85-478F-BCC9-BBE45B82D917}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>btl</RootNamespace>
+    <AssemblyName>btl</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Báo cáo dữ liệu\formrepost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Báo cáo dữ liệu\formrepost.Designer.cs">
+      <DependentUpon>formrepost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Báo cáo dữ liệu\ListBaocao\listPhieuDiemmonhocgv.cs" />
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\formloadtimkiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\formloadtimkiem.Designer.cs">
+      <DependentUpon>formloadtimkiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\formtimkiemtheokhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\formtimkiemtheokhoi.Designer.cs">
+      <DependentUpon>formtimkiemtheokhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\formtimkiemtheolop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\formtimkiemtheolop.Designer.cs">
+      <DependentUpon>formtimkiemtheolop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\timkiemtheomon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\timkiemtheomon.Designer.cs">
+      <DependentUpon>timkiemtheomon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\Xử lý dữ liệu tìm kiếm\timkiemkhoi.cs" />
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\Xử lý dữ liệu tìm kiếm\timkiemlop.cs" />
+    <Compile Include="Chức năng tìm kiếm\formTimkiem\Xử lý dữ liệu tìm kiếm\timkiemmon.cs" />
+    <Compile Include="Dulieurepost.cs">
+      <DependentUpon>Dulieurepost.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dulieurepost.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dulieurepost.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="formhethong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formhethong.Designer.cs">
+      <DependentUpon>formhethong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connectionstring\connect.cs" />
+    <Compile Include="Formdangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formdangnhap.Designer.cs">
+      <DependentUpon>Formdangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formchucnang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formchucnang.Designer.cs">
+      <DependentUpon>formchucnang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formitemthongtintaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formitemthongtintaikhoan.Designer.cs">
+      <DependentUpon>formitemthongtintaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuenmatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuenmatkhau.Designer.cs">
+      <DependentUpon>FormQuenmatkhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTimkiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTimkiem.Designer.cs">
+      <DependentUpon>formTimkiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formtrangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formtrangchu.Designer.cs">
+      <DependentUpon>Formtrangchu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thongkediemmon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Thongkediemmon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Thongkediemtkkhoi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Thongkediemtkkhoi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Thongkediemtklop.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Thongkediemtklop.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThongkeTKdiemmon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongkeTKdiemmon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="thongkettdanhhieuhs.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>thongkettdanhhieuhs.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="thongketthocsinh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>thongketthocsinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\FormDiemtk_AcountGiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\FormDiemtk_AcountGiaovien.Designer.cs">
+      <DependentUpon>FormDiemtk_AcountGiaovien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\FormHocsinh_AcountGiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\FormHocsinh_AcountGiaovien.Designer.cs">
+      <DependentUpon>FormHocsinh_AcountGiaovien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\FormLophoc_AcountGiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\FormLophoc_AcountGiaovien.Designer.cs">
+      <DependentUpon>FormLophoc_AcountGiaovien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\FormMonhoc_Acountgiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\FormMonhoc_Acountgiaovien.Designer.cs">
+      <DependentUpon>FormMonhoc_Acountgiaovien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\formxuly\formsuattdiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\formxuly\formsuattdiem.Designer.cs">
+      <DependentUpon>formsuattdiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\formxuly\formsuatths.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\formxuly\formsuatths.Designer.cs">
+      <DependentUpon>formsuatths.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\formxuly\formtimdiemmonhocgv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\formxuly\formtimdiemmonhocgv.Designer.cs">
+      <DependentUpon>formtimdiemmonhocgv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\formxuly\formtimsv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\formxuly\formtimsv.Designer.cs">
+      <DependentUpon>formtimsv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xulyacounGiaovien\Xulydulieuacontgv\Xulydiemmonhocsv.cs" />
+    <Compile Include="xulyacounGiaovien\Xulydulieuacontgv\Xulydulieudiem.cs" />
+    <Compile Include="xulyacounGiaovien\Xulydulieuacontgv\xulyhocsinh_giaovien.cs" />
+    <Compile Include="xulyacounGiaovien\Xulydulieuacontgv\xulylophocacgiaovien.cs" />
+    <Compile Include="Xulyacountadmin\FormDiemtk_AcountAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountadmin\FormDiemtk_AcountAdmin.Designer.cs">
+      <DependentUpon>FormDiemtk_AcountAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountadmin\FormGiaovien_AcountAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountadmin\FormGiaovien_AcountAdmin.Designer.cs">
+      <DependentUpon>FormGiaovien_AcountAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formHocsinh_AccountAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formHocsinh_AccountAdmin.Designer.cs">
+      <DependentUpon>formHocsinh_AccountAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountadmin\FormLop_acountAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountadmin\FormLop_acountAdmin.Designer.cs">
+      <DependentUpon>FormLop_acountAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountadmin\FormMonhoc_AccountAddmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountadmin\FormMonhoc_AccountAddmin.Designer.cs">
+      <DependentUpon>FormMonhoc_AccountAddmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formxuly\formtimkiemhs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formxuly\formtimkiemhs.Designer.cs">
+      <DependentUpon>formtimkiemhs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formxuly\Themvaupdategiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formxuly\Themvaupdategiaovien.Designer.cs">
+      <DependentUpon>Themvaupdategiaovien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formxuly\Themvaupdatehocsinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formxuly\Themvaupdatehocsinh.Designer.cs">
+      <DependentUpon>Themvaupdatehocsinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formxuly\Timgiavienadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountadmin\formxuly\Timgiavienadmin.Designer.cs">
+      <DependentUpon>Timgiavienadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountadmin\XulydulieuData\Xulyad_Giaovien.cs" />
+    <Compile Include="Xulyacountadmin\XulydulieuData\Xulydlad_Hocsinh.cs" />
+    <Compile Include="Xulyacountadmin\XulydulieuData\xulydl_Monhoc.cs" />
+    <Compile Include="Xulyacountadmin\XulydulieuData\Xulylophocadmin.cs" />
+    <Compile Include="Xulyacountsinhvien\Form_Môn học_Hocsinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountsinhvien\Form_Môn học_Hocsinh.Designer.cs">
+      <DependentUpon>Form_Môn học_Hocsinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulyacountsinhvien\form_hocsinh_Hocsinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xulyacountsinhvien\form_hocsinh_Hocsinh.Designer.cs">
+      <DependentUpon>form_hocsinh_Hocsinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xulydulieu\Xulydangnhap\Dangnhap.cs" />
+    <Compile Include="Xulydulieu\Xulydangnhap\Quenmatkhau.cs" />
+    <Compile Include="Xulydulieu\Xuthithongtintaikhoan\thongtintaikhoan.cs" />
+    <EmbeddedResource Include="Báo cáo dữ liệu\formrepost.resx">
+      <DependentUpon>formrepost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chức năng tìm kiếm\formTimkiem\formloadtimkiem.resx">
+      <DependentUpon>formloadtimkiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chức năng tìm kiếm\formTimkiem\formtimkiemtheokhoi.resx">
+      <DependentUpon>formtimkiemtheokhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chức năng tìm kiếm\formTimkiem\formtimkiemtheolop.resx">
+      <DependentUpon>formtimkiemtheolop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chức năng tìm kiếm\formTimkiem\timkiemtheomon.resx">
+      <DependentUpon>timkiemtheomon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formhethong.resx">
+      <DependentUpon>formhethong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formdangnhap.resx">
+      <DependentUpon>Formdangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formchucnang.resx">
+      <DependentUpon>formchucnang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formitemthongtintaikhoan.resx">
+      <DependentUpon>formitemthongtintaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuenmatkhau.resx">
+      <DependentUpon>FormQuenmatkhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTimkiem.resx">
+      <DependentUpon>formTimkiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formtrangchu.resx">
+      <DependentUpon>Formtrangchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Thongkediemmon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Thongkediemmon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thongkediemtkkhoi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Thongkediemtkkhoi.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thongkediemtklop.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Thongkediemtklop.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongkeTKdiemmon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongkeTKdiemmon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thongkettdanhhieuhs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>thongkettdanhhieuhs.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thongketthocsinh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>thongketthocsinh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xulyacounGiaovien\FormDiemtk_AcountGiaovien.resx">
+      <DependentUpon>FormDiemtk_AcountGiaovien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xulyacounGiaovien\FormHocsinh_AcountGiaovien.resx">
+      <DependentUpon>FormHocsinh_AcountGiaovien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xulyacounGiaovien\FormLophoc_AcountGiaovien.resx">
+      <DependentUpon>FormLophoc_AcountGiaovien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xulyacounGiaovien\FormMonhoc_Acountgiaovien.resx">
+      <DependentUpon>FormMonhoc_Acountgiaovien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xulyacounGiaovien\formxuly\formsuattdiem.resx">
+      <DependentUpon>formsuattdiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xulyacounGiaovien\formxuly\formsuatths.resx">
+      <DependentUpon>formsuatths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xulyacounGiaovien\formxuly\formtimdiemmonhocgv.resx">
+      <DependentUpon>formtimdiemmonhocgv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xulyacounGiaovien\formxuly\formtimsv.resx">
+      <DependentUpon>formtimsv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountadmin\FormDiemtk_AcountAdmin.resx">
+      <DependentUpon>FormDiemtk_AcountAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountadmin\FormGiaovien_AcountAdmin.resx">
+      <DependentUpon>FormGiaovien_AcountAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountadmin\formHocsinh_AccountAdmin.resx">
+      <DependentUpon>formHocsinh_AccountAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountadmin\FormLop_acountAdmin.resx">
+      <DependentUpon>FormLop_acountAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountadmin\FormMonhoc_AccountAddmin.resx">
+      <DependentUpon>FormMonhoc_AccountAddmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountadmin\formxuly\formtimkiemhs.resx">
+      <DependentUpon>formtimkiemhs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountadmin\formxuly\Themvaupdategiaovien.resx">
+      <DependentUpon>Themvaupdategiaovien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountadmin\formxuly\Themvaupdatehocsinh.resx">
+      <DependentUpon>Themvaupdatehocsinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountadmin\formxuly\Timgiavienadmin.resx">
+      <DependentUpon>Timgiavienadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountsinhvien\Form_Môn học_Hocsinh.resx">
+      <DependentUpon>Form_Môn học_Hocsinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xulyacountsinhvien\form_hocsinh_Hocsinh.resx">
+      <DependentUpon>form_hocsinh_Hocsinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Dulieurepost.xsc">
+      <DependentUpon>Dulieurepost.xsd</DependentUpon>
+    </None>
+    <None Include="Dulieurepost.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dulieurepost.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dulieurepost.xss">
+      <DependentUpon>Dulieurepost.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icontimkiem-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconhouse-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icontui-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconttphanmem-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imnguoi-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icontaikhoan-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh amastion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhthongtincanhan-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh cá nhân.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh cá nhân1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh hearder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh_hearder-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhdep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh-đệp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh canhan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_học_sinh-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonhoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icondiemmh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh heder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconlophoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhtimkiem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ed28c3ea-c88f-41a9-9f4a-8e05b2f27775.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
